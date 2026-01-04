@@ -248,6 +248,7 @@ a svg {
 .hero-img-ads-bottom {
   bottom: -63px;
   right: 48px;
+  width: 123px;
   flex-direction: column;
 }
 .hero-img-ads-number {
