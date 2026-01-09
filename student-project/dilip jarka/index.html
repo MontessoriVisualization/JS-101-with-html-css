@@ -3,11 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Let's Learn - Educational Platform</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>my name is dilip jarka</h1>
-    <h2>i live in bhaktapur</h2>
-    
+    <!-- Navigation Section Start -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Let's Learn</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="#" class="btn">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Navigation Section End -->
+
+    <!-- Hero/Feature Section -->
+    <section class="hero-section">
+        <!-- LEFT: Text Content -->
+        <div class="hero-left">
+            <p class="trusted-text">
+                ✔ Trusted By 4000+ Students
+            </p>
+            <h1 class="hero-heading">
+                Best <span class="accent-text">IT Training & Computer</span><br />
+                Training Institute in Nepal
+            </h1>
+            <p class="hero-description">
+                We provide professional IT and computer training with expert trainers and hands-on learning.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Enroll Now</button>
+                <button class="btn btn-secondary">View All Courses</button>
+            </div>
+        </div>
+
+        <!-- RIGHT: Image -->
+        <div class="hero-right">
+            <img
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+                alt="IT Training Illustration"
+                class="hero-image"
+            />
+        </div>
+    </section>
+    <!-- Stats Section -->
+    <div class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h2 class="stat-number">4000+</h2>
+                <p class="stat-label">Students Trained</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="stat-number">98%</h2>
+                <p class="stat-label">Success Rate</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="stat-number">10+</h2>
+                <p class="stat-label">Years Experience</p>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="courses" class="courses">
+            <div class="container">
+                <h2>Popular Courses</h2>
+                <div class="course-grid">
+                    <div class="course-card">
+                        <img src="https://allaboutenglishmastery.com/wp-content/uploads/2023/12/1-810x500.png" alt="Course 1">
+                        <h3>English Mastery</h3>
+                        <p>Improve your English skills with interactive lessons.</p>
+                        <a href="#" class="btn">Enroll Now</a>
+                    </div>
+                    <div class="course-card">
+                        <img src="https://i.ytimg.com/vi/c-1WS6ce9Lc/maxresdefault.jpg" alt="Course 2">
+                        <h3>Math Fundamentals</h3>
+                        <p>Build a strong foundation in mathematics.</p>
+                        <a href="#" class="btn">Enroll Now</a>
+                    </div>
+                    <div class="course-card">
+                        <img src="https://static.vecteezy.com/system/resources/previews/006/407/118/non_2x/digital-skills-word-concepts-dark-blue-banner-computer-literacy-infographics-with-icons-on-color-background-isolated-typography-illustration-with-text-arial-black-font-used-vector.jpg" alt="Course 3">
+                        <h3>Digital Skills</h3>
+                        <p>Learn coding and tech essentials.</p>
+                        <a href="#" class="btn">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Let's Learn is dedicated to providing high-quality education accessible to everyone. Our platform offers diverse courses to help you achieve your goals.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Have questions? Reach out to us at info@letslearn.asia</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Let's Learn. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
