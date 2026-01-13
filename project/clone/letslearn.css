@@ -13,6 +13,7 @@
   --text-color: #646464;
   --background-color: #f8f9fa;
   --defult-text-color: #000000;
+  --footer-background-color: #000000;
 }
 body {
   background-color: var(--background-color);
@@ -214,7 +215,7 @@ a svg {
   width: 48%;
   height: 320px;
   position: relative;
-  background-image: url("https://letslearn.asia/wp-content/uploads/2025/10/ITtraininginstituteinnepal2.webp");
+  background-image: url("https://letslearn.asia/wp-content/uploads/2025/10/ITtraininginstituteinnepal.webp");
   border-radius: 20px;
   background-size: cover;
   background-position: center;
@@ -254,4 +255,67 @@ a svg {
 .hero-img-ads-number {
   font-weight: 700;
   color: var(--defult-text-color);
+}
+
+/* footer */
+footer {
+  background-color: var(--footer-background-color);
+  color: white;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.footer-logo img {
+  height: 40px;
+}
+.footer-info-all {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.footer-dec {
+  font-size: 0.9em;
+  color: #d3d3d3;
+  line-height: 1.6em;
+  margin-bottom: 20px;
+}
+.footer-socials {
+  display: flex;
+  gap: 15px;
+}
+.footer-socials a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.footer-socials a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-socials a svg {
+  width: 20px;
+  margin: 0;
+  height: 20px;
+  fill: transparent;
+}
+.fa-instagram {
+  background-color: #e4405f;
+}
+.fa-facebook-f {
+  background-color: #3b5998;
+}
+.fa-twitter {
+  background-color: #55acee;
 }
