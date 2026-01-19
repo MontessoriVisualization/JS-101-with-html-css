@@ -69,3 +69,28 @@ if(LetsLearnUser.isLoggedIn){
 
     //hw create an object for a student with properties like name, age, grade, subjects (array of subjects), and a method to display student details.
 
+
+    const students = {
+        joe: {
+            name: "Joe",
+            age: 16,
+            grade: "10th",
+            subjects: ["Math", "Science", "History"],
+    
+        },
+        kelly: {
+            name: "Kelly",
+            age: 15,
+            grade: "9th",
+            subjects: ["English", "Art", "Physical Education"],
+         
+
+        }
+    };
+  function displayStudentDetails(a){
+    console.log("Name: "+a.name);
+    console.log("Age: "+a.age);
+    console.log("Grade: "+a.grade);
+    console.log("Subjects: "+a.subjects.join(", "));
+  }
+    displayStudentDetails(students.joe);
