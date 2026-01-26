@@ -1,0 +1,1 @@
+console.log("businessLogic".slice(0,4));
