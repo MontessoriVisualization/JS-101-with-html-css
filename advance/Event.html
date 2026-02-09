@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #383434;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        p{
+            white-space: pre-wrap; /* Preserve whitespace and line breaks */
+            font-size: 2em;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            display: inline-block;
+        }
+        span{
+          font-size: 2em;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            animation: blink 1s step-start infinite;
+            margin-top: 0px;        
+            display: inline-block;    
+        }
+
+        div{
+            margin-top: 20px;
+            height: 100px;
+            padding: 20px;       }   
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <button >Click ME</button>
+
+<div>
+        <P></P> <span>|</span>
+</div>
+
+    <script src="mouseEvent.js"></script>
+    <script src="keyboardEvent.js"></script>
+    <script src="loadEvent.js"></script>
+</body>
+</html>
