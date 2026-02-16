@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Samurai Clock</title>
+
+  <!-- Japanese-style font -->
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="maincontainer">
+
+    <!-- CLOCK -->
+    <div class="clock-container">
+      <div class="kanji">侍の時</div>
+      <div class="time" id="time">00:00:00</div>
+      <div class="divider"></div>
+      <div class="date" id="date">---</div>
+    </div>
+
+    <!-- STOPWATCH -->
+    <div class="stpbody">
+      <div id="stpcont">
+         <h1 id="H1">Stop Watch</h1>
+         <div class="divider"></div>
+        <div id="display">00:00:00:00</div>
+        <div class="divider"></div>
+
+        <div id="control">
+          <button id="start">start</button>
+          <button id="stop">stop</button>
+          <button id="reset">reset</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

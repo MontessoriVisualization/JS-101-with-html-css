@@ -1,0 +1,155 @@
+/* 1. Import Elegant Anime Font */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+/* 2. Cinematic Background      */
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Cinzel', serif;
+    background: linear-gradient(
+        to bottom,
+        #0a0a0f 0%,
+        #141421 40%,
+        #1f1f2e 70%,
+        #0d0d15 100%
+    );
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e6e6e6;
+}
+
+/* Subtle moving light effect */
+body::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05), transparent 60%);
+    animation: slowMove 20s linear infinite;
+}
+
+@keyframes slowMove {
+    from { transform: translate(-25%, -25%) rotate(0deg); }
+    to { transform: translate(-25%, -25%) rotate(360deg); }
+}
+
+/* 3. Overlay Container         */
+.overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 4. Game Box (Anime Card)     */
+
+.game-box {
+    position: relative;
+    background: rgba(20, 20, 30, 0.85);
+    padding: 50px;
+    width: 440px;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    animation: fadeIn 1.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* 5. Title Styling             */
+h1 {
+    font-size: 24px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+    color: #f5f5f5;
+    text-transform: uppercase;
+}
+
+
+/* 6. Word Display              */
+.word {
+    font-size: 34px;
+    letter-spacing: 15px;
+    margin: 30px 0;
+    font-weight: bold;
+    color: #ffffff;
+    position: relative;
+}
+
+/* Subtle glowing underline */
+.word::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 2px;
+    margin: 10px auto 0;
+    background: linear-gradient(to right, transparent, #ffffff55, transparent);
+}
+
+/* 7. Input Field               */
+input {
+    padding: 12px;
+    width: 70px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background: #111;
+    color: #fff;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input:focus {
+    border-color: #ffffff;
+    background: #1c1c28;
+}
+
+/* 8. Buttons                   */
+button {
+    padding: 12px 20px;
+    margin: 15px 10px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background: #1a1a25;
+    color: #e6e6e6;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #29293d;
+    border-color: #777;
+}
+
+/* Guess button stronger effect */
+#guessBtn:hover {
+    box-shadow: 0 0 15px rgba(255,255,255,0.15);
+}
+
+/* 9. Attempts Text             */
+.attempts {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #bfbfbf;
+}
+
+
+/* 10. Message Area             */
+
+#message {
+    margin-top: 20px;
+    min-height: 25px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
