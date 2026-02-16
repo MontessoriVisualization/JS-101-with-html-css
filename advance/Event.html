@@ -58,9 +58,97 @@
 <div>
         <P></P> <span>|</span>
 </div>
-
-    <script src="mouseEvent.js"></script>
-    <script src="keyboardEvent.js"></script>
-    <script src="loadEvent.js"></script>
 </body>
+<script>
+
+    //mouse event
+    // button.addEventListener("click", (e) => {  clicking
+    // button.addEventListener("mouseover", (e) => {` Hovering
+    // button.addEventListener("mouseout", (e) => {` Not Hovering
+    // button.addEventListener("mousedown", (e) => {` Pressing
+    // button.addEventListener("mouseup", (e) => {` Releasing
+    // button.addEventListener("dblclick", (e) => {` Double Click
+
+
+    const button = document.querySelector("button");
+    button.addEventListener("mousedown", (e) => {
+        button.innerText = "Pressing";
+    });
+    button.addEventListener("mouseup", (e) => {
+        button.innerText = "Releasing";
+    });
+
+
+    //keyboard event
+    // document.addEventListener("keydown", (e) => {` Pressing a key
+    // document.addEventListener("keyup", (e) => {` Releasing a key
+    // document.addEventListener("keypress", (e) => {` Pressing a key (deprecated)
+
+    document.addEventListener("keydown", (e) => {
+        if(e.key === "Backspace"){
+    const pre=document.querySelector("p").innerText 
+    document.querySelector("p").innerText=pre.slice(0,pre.length-1);
+
+            
+        }
+
+        else if(e.key === "Enter"){
+            document.querySelector("p").innerText += "\n";
+console.log(document.querySelector("span").style);
+
+        }
+        else{
+                    document.querySelector("p").innerText += `${e.key}`;
+
+        }
+
+    });
+
+
+
+    // document.addEventListener("keyup", (e) => {
+    //     console.log(`Key released: ${e.key}`);
+    // });
+
+    // 
+
+
+    //load event
+    // window.addEventListener("load", (e) => {` Page has fully loaded
+//widow.addEventListener("beforeunload", (e) => {` Before the page unloads
+    // window.addEventListener("unload", (e) => {` Page is unloading
+
+    window.addEventListener("load", (e) => {
+
+        const div = document.createElement("div");
+        div.textContent = "Page has fully loaded";
+        div.style.backgroundColor = "#ff5733";
+        const span = document.createElement("div");
+        span.textContent = "X";
+        span.style.marginLeft = "10px";
+        span.style.cursor = "pointer";
+        div.appendChild(span);
+        div.style.fontSize = "2em";
+        div.style.fontWeight = "bold";
+        div.style.position = "fixed";
+        div.style.top = "50%";
+        div.style.left = "50%";
+        div.style.transform = "translate(-50%, -50%)";
+
+        span.addEventListener("click", () => {
+            div.remove();
+        });
+        setTimeout(() => {
+                   document.body.appendChild(div);
+        }, 2000);
+        
+    });
+
+    
+
+    
+
+
+
+</script>
 </html>

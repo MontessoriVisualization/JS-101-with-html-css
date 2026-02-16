@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="display">00:00:00</div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+//dom value
+const display = document.querySelector('.display');
+const startButton = document.getElementById('start');
+const stopButton = document.getElementById('stop');
+let startTime = 0;
+let timerInterval;
+let running = false;
+let elapsedTime = 0;// Variable to store elapsed time when stopped
+
+startButton.addEventListener('click', () => {
+    if (!running) {
+        running = true;
+  console.log(Date.now())
+        startTime = Date.now() - elapsedTime;
+        timerInterval = setInterval(showfunct, 1000);
+    }
+});
+stopButton.addEventListener('click', () => {
+    clearInterval(timerInterval);
+    running = false;
+    console.log(Date.now())
+    elapsedTime = Date.now() - startTime;
+});
+function showfunct() {
+     elapsedTime = Date.now() - startTime;
+     console.log(Date.now());
+     console.log(elapsedTime);
+    const hours = Math.floor(elapsedTime / (1000 * 60 * 60));
+    const minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
+    display.textContent = `${String(hours)}:${String(minutes)}:${String(seconds)}`;
+}
+
+</script>
+</html>

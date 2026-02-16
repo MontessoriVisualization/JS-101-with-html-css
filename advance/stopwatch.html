@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #282c34;
+            color: #61dafb;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .display {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="display">00:00:00</div>
+    <div>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </div>
+            <button id="reset">Reset</button>`
+
+</body>
+<script>
+    // Get references to DOM elements
+    const display = document.querySelector('.display');
+    const startButton = document.getElementById('start');
+    const stopButton = document.getElementById('stop');
+    const resetButton = document.getElementById('reset');
+
+    let startTime = 0;
+    let timerInterval;
+    let running = false;
+//     let elapsedTime = 0;// Variable to store elapsed time when stopped
+
+// setInterval(() => {
+//         console.log(Date.now())
+
+    
+// }, 100); // Update every 100 milliseconds
+// startButton.addEventListener('click', () => {
+//     if (!running) {
+//         running = true;
+//         console.log(elapsedTime)
+//         startTime = Date.now() - elapsedTime; // Continue from where it left off
+//         timerInterval = setInterval(updateDisplay, 100);
+//     }
+// });
+// stopButton.addEventListener('click', () => {
+//     if (running) {
+//         running = false;
+//         clearInterval(timerInterval);
+//         elapsedTime = Date.now() - startTime; // Save elapsed time
+//     }
+// });
+// resetButton.addEventListener('click', () => {
+//     running = false;
+//     clearInterval(timerInterval);
+//     startTime = 0;
+//     elapsedTime = 0; // Reset elapsed time
+//     display.textContent = "00:00:00";
+// });
+
+// function updateDisplay() {
+//     if (running) {
+//         const currentTime = Date.now();
+//         const totalElapsedTime = currentTime - startTime;
+
+//         const hours = Math.floor(totalElapsedTime / 3600000);
+//         const minutes = Math.floor((totalElapsedTime % 3600000) / 60000);
+//         const seconds = Math.floor((totalElapsedTime % 60000) / 1000);
+
+//         display.textContent = `${String(hours)}:${String(minutes)}:${String(seconds)}`;
+//     }
+// }   
+
+    startButton.addEventListener('click', () => {
+        if (!running) {
+            running = true;
+     timerInterval = setInterval(updateDisplay, 1000);
+        }
+    });
+    stopButton.addEventListener('click', () => {
+        if (running) {
+            running = false;
+            clearInterval(timerInterval);
+        }
+    });
+    resetButton.addEventListener('click', () => {
+        running = false;
+        clearInterval(timerInterval);
+        startTime = 0;
+        display.textContent = "00:00:00";
+    });
+
+    function updateDisplay() {
+        if (running) {
+ startTime++
+ hours = Math.floor(startTime / 3600);
+ minutes = Math.floor((startTime % 3600) / 60);
+    seconds = Math.floor((startTime % 60));
+ display.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+        }
+    }
+
+
+</script>
+</html>

@@ -152,8 +152,10 @@ startBtn.addEventListener("click", () => {
 });
 
 pauseBtn.addEventListener("click", () => {
-  clearInterval(timer);
-  isRunning = false;
+  if (isRunning) {
+    clearInterval(timer);
+    isRunning = false;
+  }
 });
 
 resetBtn.addEventListener("click", () => {
