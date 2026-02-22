@@ -5,99 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #383434;
-        color: #fff;
+      .container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
+        gap: 15px;
+        align-items: center;
       }
-      .lists {
-        display: flex;
+
+      button {
+        padding: 12px 20px;
+        font-size: 16px;
+        justify-content: center;
         align-items: center;
         gap: 10px;
-        margin-bottom: 10px;
-      }
-      .edit,
-      .delete {
         cursor: pointer;
-        padding: 5px 10px;
-        border: 1px solid #fff;
-        border-radius: 5px;
-        font-size: 0.9em;
+        margin: 0;
+        border-radius: 6px;
+      }
+      .red {
+        background-color: #900d90;
+        color: white;
+      }
+      .blue {
+        background-color: #0a1172;
+        color: white;
+      }
+      .black {
+        background-color: black;
+        color: white;
+      }
+      .green {
+        background-color: #234f1e;
+        color: white;
       }
     </style>
   </head>
+
   <body>
-    <h1>DC heros</h1>
-    <ul class="container">
-      <div class="lists">
-        <li class="li-list">Superman</li>
-        <div class="edit"><=</div>
-        <div class="delete">X</div>
-      </div>
-    </ul>
-  </body>
-  <script>
-    const container = document.querySelector(".container");
-    // function addHeros(hero) {
-    //   const listItem = document.createElement("li");
-    //   listItem.classList.add("list");
-    //   listItem.textContent = hero; //innerText innerHTML
-    //   container.appendChild(listItem);
-    // }
-    addHeros("Batman");
-    addHeros("Flash");
-    addHeros("Wonder Woman");
-
-    function addHeros(hero) {
-      const listItem = ` <div class="lists">
-        <li class="li-list">${hero}</li>
-        <div class="edit"><=</div>
-        <div class="delete">X</div>
-      </div>`;
-      container.innerHTML += listItem;
-    }
-    const lists = document.querySelectorAll(".lists");
-    lists.forEach((list) => {
-      const deleteBtn = list.querySelector(".delete");
-      deleteBtn.addEventListener("click", () => {
-        console.log("You clicked me");
-        list.remove();
-      });
-      const editBtn = list.querySelector(".edit");
-      console.log(list);
-      //   editBtn.addEventListener("click", () => {
-      //     const listItem = list.querySelector(".li-list");
-      //     const newName = prompt("Enter new name", listItem.textContent);
-      //     if (newName) {
-      //       listItem.textContent = newName;
-      //     }
-      //   });
-
-      //next way
-      editBtn.addEventListener("click", () => {
-        const listItem = list.querySelector(".li-list");
-        const inputField = document.createElement("input");
-        inputField.type = "text";
-        inputField.value = listItem.textContent;
-        console.log(inputField);
-        // list.replaceChild(inputField, listItem);
-        listItem.replaceWith(inputField);
-        inputField.focus();
-        inputField.addEventListener("keydown", (e) => {
-          if (e.key === "Enter") {
-            if (inputField.value.trim() !== "") {
-              listItem.textContent = inputField.value;
-              inputField.replaceWith(listItem);
-            } else {
-              alert("Name cannot be empty");
-            }
-          }
+    <div class="container">
+      <button class="red" bg-color="red">red</button>
+      <button class="blue" bg-color="#0a1172">blue</button>
+      <button class="green" bg-color="#234f1e">green</button>
+      <button class="black" bg-color="black">black</button>
+    </div>
+    <script>
+      let buttons = document.querySelectorAll("button");
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          let color = button.getAttribute("bg-color");
+          document.body.style.backgroundColor = color;
         });
       });
-    });
-  </script>
+    </script>
+  </body>
 </html>
